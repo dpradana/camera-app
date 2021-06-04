@@ -39,7 +39,6 @@ class CaptureActivity : BaseActivity() {
     private val photos = ArrayList<String>()
 
     companion object {
-        val RESULT_CAMERA = 1001
         var dataPhoto: ((ArrayList<String>) -> Unit)? = null
         var onFinish:(() -> Unit)? = null
         fun toActivity(
@@ -54,7 +53,7 @@ class CaptureActivity : BaseActivity() {
             bundle?.let {
                 intent.putExtras(bundle)
             }
-            activity.startActivityForResult(intent, RESULT_CAMERA)
+            activity.startActivity(intent)
         }
     }
 

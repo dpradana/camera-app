@@ -24,13 +24,14 @@ class CameraTestActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_camera_test)
+        setTheme(privy.id.cameralibrary.R.style.Theme_LivenessVideoCapturePrivyID)
 
         button.setOnClickListener {
             if (hasPermissions(this)) {
                 CaptureActivity.toActivity(this, null, {
                     Log.i("data foto", it[0])
                 }, {
-                    
+
                 })
             }
         }
