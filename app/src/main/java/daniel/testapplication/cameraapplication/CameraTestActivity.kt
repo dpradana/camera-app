@@ -27,9 +27,11 @@ class CameraTestActivity : AppCompatActivity() {
 
         button.setOnClickListener {
             if (hasPermissions(this)) {
-                CaptureActivity.toActivity(this, null) {
-                    Log.i("data", it[0])
-                }
+                CaptureActivity.toActivity(this, null, {
+                    Log.i("data foto", it[0])
+                }, {
+                    
+                })
             }
         }
 
