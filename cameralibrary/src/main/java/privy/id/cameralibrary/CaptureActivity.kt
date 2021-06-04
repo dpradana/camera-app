@@ -41,12 +41,15 @@ class CaptureActivity : BaseActivity() {
     companion object {
         val RESULT_CAMERA = 1001
         var dataPhoto: ((ArrayList<String>) -> Unit)? = null
+        var onFinish:(() -> Unit)? = null
         fun toActivity(
             activity: AppCompatActivity,
             bundle: Bundle? = null,
-            callback: ((ArrayList<String>) -> Unit)
+            callback: ((ArrayList<String>) -> Unit),
+            onFinish: (() -> Unit)
         ){
             dataPhoto = callback
+            this.onFinish = onFinish
             val intent = Intent(activity, CaptureActivity::class.java)
             bundle?.let {
                 intent.putExtras(bundle)
@@ -109,6 +112,7 @@ class CaptureActivity : BaseActivity() {
 
         cvBack?.setOnClickListener {
             finish()
+            onFinish?.invoke()
         }
 
     }
@@ -222,6 +226,7 @@ class CaptureActivity : BaseActivity() {
 
     override fun onBackPressed() {
         if (photos.isEmpty()) {
+            onFinish?.invoke()
             super.onBackPressed()
         }
     }
