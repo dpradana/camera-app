@@ -26,7 +26,7 @@ class CaptureActivity : BaseActivity() {
     private lateinit var viewFinder: PreviewView
     private var tvInfoRecord: TextView? = null
     private var tvTitle: TextView? = null
-    private var btnTakeRecorder: CardView? = null
+    private var btnTakeRecorder: ConstraintLayout? = null
     private var cvBack: CardView? = null
     private var viewFirst: View? = null
     private var viewBackground: View? = null

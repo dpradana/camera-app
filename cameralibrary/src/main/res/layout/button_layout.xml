@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cl_button"
     android:layout_width="match_parent"
     android:layout_height="52dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -8,18 +9,21 @@
     android:focusable="true"
     android:layout_margin="2dp"
     app:cardCornerRadius="@dimen/radius_button"
+    android:background="@drawable/ic_button"
     xmlns:tools="http://schemas.android.com/tools">
 
     <TextView
         android:id="@+id/tv_button"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:text="@string/next"
-        android:gravity="center"
-        android:background="@color/liveness_accent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/medium"
         android:textSize="16sp"
         android:textAllCaps="false"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-</androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
