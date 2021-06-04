@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="52dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_margin="2dp"
+    app:cardCornerRadius="@dimen/radius_button"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/tv_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:text="@string/next"
+        android:gravity="center"
+        android:background="@color/liveness_accent"
+        android:fontFamily="@font/medium"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"/>
+
+</androidx.cardview.widget.CardView>

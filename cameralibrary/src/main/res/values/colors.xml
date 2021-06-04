@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_transparent">#50FFFFFF</color>
+    <color name="liveness_accent">#E42E2C</color>
+    <color name="red_10">#FFE8E9</color>
+    <color name="black_20">#848D9D</color>
+    <color name="black_0">#F0F1F3</color>
+    <color name="black_50_transparent">#301B222D</color>
+    <color name="black_50_transparent_2">#501B222D</color>
+    <color name="transparent">#00000000</color>
+    <color name="dark_blue">#1B222D</color>
+</resources>
